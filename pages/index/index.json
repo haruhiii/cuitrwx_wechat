@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-icon": "/miniprogram_npm/weui-miniprogram/icon/icon"
+  },
+  "navigationBarTitleText": "",
+  "navigationBarBackgroundColor": "#005da0",
+  "navigationBarTextStyle": "white"
+}

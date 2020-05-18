@@ -1,0 +1,19 @@
+<!--pages/question/index.wxml-->
+<view class="container">
+
+	<view class="posts">
+		<view class="post" wx:for="{{questions}}" wx:key="id">
+				<view class="post-title">{{item.question}}</view>
+				<view class="post-content">{{item.answer}}...</view>
+			<view class="post-text-line"></view>
+		</view>
+		<view class="post">
+
+				<view class="post-title">开发者信息</view>
+				<view class="post-content">@孔德有 @沈林伟</view>
+			<view class="post-text-line"></view>
+		</view>
+	</view>
+
+	<view class="no-more">没有更多信息啦</view>
+</view>

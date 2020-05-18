@@ -1,0 +1,50 @@
+<!--pages/sign/index.wxml-->
+
+<view class="container"> 
+	<swiper class="swiper" bindchange="onSwipe" >
+		<block wx:for="{{swiperItems}}" wx:key="*this" >
+			<swiper-item>
+
+				<view class="swiper-container">
+					<scroll-view class="scroll-container" scroll-y="true">
+
+						<view class="container">
+							<view class="background"></view>
+						</view>
+						<view class="name">
+							{{item.name}}
+						</view>
+						<view class=" summary target">
+							<view class="target-text">简介: </view>
+							<view class="target-content">
+								{{item.summary}}
+							</view>
+						</view>
+						<view class=" summary target">
+							<view class="target-text">面向人群: </view>
+							<view class="target-content">{{item.target}} </view>
+						</view>
+						<view class=" summary target">
+							<view class="target-text">时间: </view>
+							<view class="target-content">{{item.time}} </view>
+						</view>
+						<view class=" summary target">
+							<view class="target-text">学分: </view>
+							<view class="target-content">{{item.score}} </view>
+						</view>
+						<view class=" summary target">
+							<view class="target-text">附件: </view>
+							<view class="target-content" data-url="{{item.url}}" bindtap="download">{{item.file}} </view>
+						</view>
+
+					</scroll-view>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+
+	<view class="button-container">
+		<button plain="true" bindtap="sign">立即登记</button>
+		<button plain="true" bindtap="ask">咨询</button>
+	</view>
+</view>

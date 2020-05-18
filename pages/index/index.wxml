@@ -1,0 +1,71 @@
+<!-- index.wxml -->
+
+
+<view class="container">
+
+<view class="background"></view>
+	<!-- 网站公告 -->
+	<!-- <view  wx:if="{{notice.shown}}" class="notice" >
+    <icon class="notice-icon" type="info" size="28rpx"/>
+		<view class="notice-text-container">
+			<text class="notice-text" animation="{{scroll}}" id="notice-text">{{notice.text}}</text>
+		</view>
+    <icon class="notice-close-icon" type="clear"  size="28rpx" bindtap="closeNotice"/>
+	</view> -->
+
+	<!-- 轮播图：活动或者固定的宣传 -->
+	<view class="title-containner">
+		<text class="title-discribe">成都信息工程大学-威尔士三一圣大卫大学</text>
+		<text class="title-content">中英校区任我行</text>
+	</view>
+	<swiper class="swiper" 
+          circular="true" 
+          >
+		<block wx:for="{{swiperItems}}" wx:key="*this">
+			<swiper-item>
+					<view class="swiper-image-container">
+					<image class="swiper-image" data-id="{{item.articleId}}" bindtap="ontapSwiper" mode="widthFix" src="{{item.src}}" />
+					</view>
+			</swiper-item>
+		</block>
+	</swiper>
+
+	<!-- 工具箱 -->
+<view class="toolkits">
+		<view class="toolkit-item" wx:for="{{toolkitItems}}" wx:key="*this" data-href="{{item.href}}" bindtap="goToolkit">
+			<image class="toolkit-image" src="{{item.src}}" mode="widthFix" ></image>
+			<view class="toolkit-text-containner">
+				<text class="toolkit-text">{{item.text}}</text>
+				<text class="toolkit-discription">{{item.discription}}</text>
+			</view>
+	</view>
+</view>
+<!-- 通知 -->
+<!-- <view class="notice-background1">
+</view>
+<view class="notice-background2">
+</view>
+<view class="notice-background3">
+</view> -->
+
+<!-- <view class="notice">
+	<view class="notice-text">
+		<text>通知 </text>
+	</view>
+	<view class="notice-content"></view>
+</view> -->
+	<!-- 信息中心 -->
+	<view class="posts" >
+		<view class="post-text">
+			信息中心
+		</view>
+		<view class="post" wx:for="{{posts}}" wx:key="*this"  >
+			<view data-id="{{item.id}}" bindtap="tapPost">
+				<view class="post-title" >{{item.title}}</view>
+				<view class="post-content">{{item.outline}}...</view>
+			</view>
+		<view class="post-text-line"></view>
+		</view>
+	</view>
+	<view class="no-more">没有更多信息啦</view>
+</view>

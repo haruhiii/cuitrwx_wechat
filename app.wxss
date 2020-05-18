@@ -1,0 +1,7 @@
+/**app.wxss**/
+@import '/miniprogram_npm/weui-miniprogram/icon/icon.wxss';
+
+Page{
+    background: rgb(255, 255, 255);
+  
+}

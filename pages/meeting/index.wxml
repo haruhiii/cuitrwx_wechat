@@ -1,0 +1,68 @@
+
+<wxs module="filter" src="./timeFix.wxs"></wxs>
+<view class="container">
+	<view class="add">
+		<view class="new">
+			<view class="add-container">
+				<view class="add-propertie">预约日期:</view>
+				<picker mode="date" value="{{date}}" start="2020-05-01" end="2030-01-01" bindchange="bindDateChange">
+					<view class="add-value" type="textview" name="className" value="{{date}}">{{date}}</view>
+				</picker>
+			</view>
+			<view class="add-container">
+				<view class="add-propertie">会面事宜:</view>
+				<picker bindchange="bindPickerChange" value="{{index}}" range="{{meters}}">
+
+					<view class="add-value">
+						{{meters[index]}}
+					</view>
+				</picker>
+			</view>
+			<view class="add-container">
+				<view class="add-propertie">补充说明:</view>
+
+			</view>
+			<textarea class="textarea" value="{{comment}}" bindinput="bindCommentChange" placeholder="如有特殊情况请备注" auto-height="true"></textarea>
+
+		</view>
+		<button class="add-button" plain="true" bindtap="meetting">新建预约</button>
+	</view>
+
+	<view class="metting-container" wx:for="{{mettings}}" wx:key="*this">
+		<view class="old">
+			<view class="base-info">
+				<view wx:if="{{item.status==0}}" class="old-name">
+					预约中
+				</view>
+				<view wx:else >
+					<view wx:if="{{item.status==1}}" class="old-name">
+						预约成功
+					</view>
+					<view wx:else class="old-name">
+						预约失败
+					</view>
+				</view>
+				<view class="old-date">
+					{{filter.fixDate(item.requestDate)}}
+				</view>
+			</view>
+		</view>
+		<view class="more-info">
+			<view wx:if="{{item.ensureTime!=null}}" class="info-item">
+				时间:	{{filter.fixTime(item.ensureTime)}}
+			</view>
+			<view wx:else class="info-item">
+				时间: 等待老师确认中
+			</view>
+			<view class="info-item">
+				事宜: {{item.matter}}
+			</view>
+			<view wx:if="{{item.comment!=null}}" class="info-item">
+				说明: {{item.comment}}
+			</view>
+			<view wx:else class="info-item">
+				说明: 无
+			</view>
+		</view>
+	</view>
+</view>

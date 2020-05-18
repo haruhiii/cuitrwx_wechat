@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="userinfo">
+		<button wx:if="{{!hasUserInfo && canIUse}}" class="login-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击登录 </button>
+		<block wx:else>
+			<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+			<form catchsubmit="go">
+
+				<view class="userinfo-container">
+					<view class="user-propertie">姓名</view>
+					<input class="user-value" type="textview" name="name" value="{{infoUseful.name}}"></input>
+				</view>
+				<view class="userinfo-container">
+					<view class="user-propertie">学号</view>
+					<input class="user-value" type="text" name="studentid" value="{{infoUseful.studentid}}"></input>
+				</view>
+				<view class="userinfo-container">
+					<view class="user-propertie">学院</view>
+					<input class="user-value" type="textview" name="academy" value="{{infoUseful.academy}}"></input>
+				</view>
+				<view class="userinfo-container">
+					<view class="user-propertie">班级</view>
+					<input class="user-value" type="textview" name="className" value="{{infoUseful.className}}"></input>
+				</view>
+				<view class="userinfo-container">
+					<view class="user-propertie">联系电话</view>
+					<input class="user-value" type="textview" name="phone" value="{{infoUseful.phone}}"></input>
+				</view>
+
+				<button class="update-btn" formType="submit">更新信息</button>
+			</form>
+		</block>
+	</view>
+
+</view>

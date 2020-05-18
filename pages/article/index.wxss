@@ -1,0 +1,29 @@
+/* pages/article/index.wxss */
+rich-text {
+  width: 700rpx;
+  padding: 25rpx 0;
+}
+.rich-text-wrp {
+  padding: 0 25rpx;
+  background-color: #fff;
+}
+/* blockquote 样式 */
+.blockquote {
+  display: block;
+  border-left: 8px solid #d0e5f2;
+  padding: 5px 10px;
+  margin: 10px 0;
+  line-height: 1.4;
+  font-size: 100%;
+  background-color: #f1f1f1;
+}
+page {
+  background-color: #F8F8F8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+
+.page-body {
+  padding: 20rpx 0;
+}

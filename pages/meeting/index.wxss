@@ -1,0 +1,89 @@
+/* pages/meet/index.wxss */
+.add{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-radius: 30rpx ;
+  border-color: #005da0;
+  width: 90vw;
+  margin-top: 40rpx;
+  padding: 20rpx;
+  justify-items: center;
+  flex-direction: column;
+}
+.add-button{
+  color: #005da0;
+  margin: 10rpx;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.old{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  background-color: #005da0;
+  border-radius: 20rpx ;
+  border-color: #005da0;
+  height: 120rpx;
+  width: 90vw;
+  margin: 40rpx 40rpx 0rpx 40rpx;
+}
+.base-info{
+  width: 480rpx;
+}
+.more-info-button{
+  width: 20rpx;
+  font-size: 34rpx;
+  color: #f2f2f2;
+}
+.old-name{
+  font-size: 36rpx;
+  color: #f2f2f2;
+}
+.old-date{
+  font-size: 24rpx;
+  color: #f2f2f2;
+} 
+.metting-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.more-info{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  height: 200rpx;
+  color: #2f2f2f;
+  background-color: #f2f2f2;
+  margin: 0 50rpx 0 50rpx;
+  border-radius: 0 0 20rpx 20rpx;
+
+}
+.info-item{
+  padding-left: 40rpx;
+}
+.add-propertie{
+  margin: 10rpx 20rpx;
+}
+.add-value{
+  margin: 10rpx 20rpx;
+}
+.add-container{
+  display: flex;
+  justify-content: space-between;
+}
+.textarea{
+  padding: 10rpx 30rpx;
+  border: solid 1rpx #cbe1f0;
+}
